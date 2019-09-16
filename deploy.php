@@ -19,7 +19,10 @@ echo <<<EOT
 EOT;
 
 // Actually run the update
+$PWD = "/home/gemacipta/public_html/abcd";
 $commands = array(
+	'echo $PWD',
+	'whoami',
 	'git pull',
 	'git status',
 	'git submodule sync',
