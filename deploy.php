@@ -4,10 +4,15 @@
 // Use ls command to shell_exec 
 // function 
 $output = shell_exec('ls'); 
+exec('ls', $output, $return_var);
+echo "<pre>$output</pre>"; 
+echo "<pre>$return_var</pre>"; 
+
+ $output_including_status = shell_exec("command 2>&1; echo $?");
+echo "<pre>$output_including_status</pre>"; 
   
 // Display the list of all file 
 // and directory 
-echo "<pre>$output</pre>"; 
 
 $TITLE   = 'Git Deployment Hamster';
 $VERSION = '0.11';
