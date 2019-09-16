@@ -1,8 +1,10 @@
 <?php 
 
 echo '222';
-shell_exec("git pull origin master");
-
+$tmp = shell_exec("git pull");
+$tmp2 = shell_exec("git pull origin master");
+echo $tmp;
+echo $tmp2;
 echo 'abcd';
 
 ?>
