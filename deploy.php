@@ -18,10 +18,13 @@ echo <<<EOT
  ^---^`-.
 EOT;
 
+    $tmp = shell_exec("cd public_html/abcd; git pull;");
+    $tmp = shell_exec("cd public_html/abcd; git pull origin master;");
 // Actually run the update
 $PWD = "/home/gemacipta/public_html/abcd";
 $commands = array(
-	'cd /public_html/abcd',
+	'cd public_html/abcd; git pull',
+	'cd public_html/abcd; git pull origin master',
 	'git pull',
 	'git status',
 	'git submodule sync',
