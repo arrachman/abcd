@@ -3,6 +3,7 @@
 // Available from https://gist.github.com/nichtich/5290675#file-deploy-php
 // Use ls command to shell_exec 
 // function 
+echo exec('whoami');
 $output = shell_exec('ls'); 
 exec('ls', $output, $return_var);
 echo "<pre>$output</pre>"; 
