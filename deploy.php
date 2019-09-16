@@ -23,6 +23,7 @@ EOT;
 // Actually run the update
 $PWD = "/home/gemacipta/public_html/abcd";
 $commands = array(
+	'dir',
 	'cd public_html/abcd; git pull',
 	'cd public_html/abcd; git pull origin master',
 	'git pull',
@@ -40,10 +41,10 @@ foreach($commands AS $command){
     // Output
     $output .= "<span style=\"color: #6BE234;\">\$</span> <span style=\"color: #729FCF;\">{$command}\n</span>";
     $output .= htmlentities(trim($tmp)) . "\n";
-    $log  .= "\$ $command\n".trim($tmp)."\n";
+    $log  .= "\$ $command 1: \n". $tmp ."\n";
+    $log  .= "\$ $command 2: \n". trim($tmp) ."\n";
 }
 $log .= "\n";
-echo $log;
 file_put_contents ('deploy-log.txt',$log,FILE_APPEND);
 echo $output; 
 ?>
