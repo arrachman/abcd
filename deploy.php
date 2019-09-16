@@ -21,8 +21,7 @@ EOT;
 // Actually run the update
 $PWD = "/home/gemacipta/public_html/abcd";
 $commands = array(
-	'echo $PWD',
-	'whoami',
+	'cd /home/gemacipta/public_html/abcd',
 	'git pull',
 	'git status',
 	'git submodule sync',
@@ -38,7 +37,6 @@ foreach($commands AS $command){
     // Output
     $output .= "<span style=\"color: #6BE234;\">\$</span> <span style=\"color: #729FCF;\">{$command}\n</span>";
     $output .= htmlentities(trim($tmp)) . "\n";
-	echo "\$ $command\n".trim($tmp)."\n";
     $log  .= "\$ $command\n".trim($tmp)."\n";
 }
 $log .= "\n";
