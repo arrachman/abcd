@@ -1,6 +1,7 @@
 <?php 
 
-shell_exec( 'git pull origin master');
+echo '222';
+shell_exec("git pull origin master");
 
 echo 'abcd';
 
