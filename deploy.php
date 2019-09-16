@@ -1,6 +1,14 @@
 <?php
 // Forked from https://gist.github.com/1809044
 // Available from https://gist.github.com/nichtich/5290675#file-deploy-php
+// Use ls command to shell_exec 
+// function 
+$output = shell_exec('ls'); 
+  
+// Display the list of all file 
+// and directory 
+echo "<pre>$output</pre>"; 
+
 $TITLE   = 'Git Deployment Hamster';
 $VERSION = '0.11';
 echo <<<EOT
