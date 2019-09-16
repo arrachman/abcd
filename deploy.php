@@ -21,7 +21,7 @@ EOT;
 // Actually run the update
 $PWD = "/home/gemacipta/public_html/abcd";
 $commands = array(
-	'cd /home/gemacipta/public_html/abcd',
+	'cd /public_html/abcd',
 	'git pull',
 	'git status',
 	'git submodule sync',
